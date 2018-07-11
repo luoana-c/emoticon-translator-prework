@@ -45,7 +45,7 @@ end
 def get_english_meaning(file, emoticon)
   emoticons = load_library(file)
   if emoticons["get_meaning"].has_key? emoticon
-    jap_emoticon = emoticons["get_emoticon"][emoticon]
+    eng_meaning = emoticons["get_meaning"][emoticon]
     
   else 
    "Sorry, that emoticon was not found"

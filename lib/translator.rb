@@ -4,7 +4,7 @@ def load_library(file)
   emoticons_file = YAML.load_file(file)
   emoticons = {}
   emoticons["get_emoticon"] = {}
-  emoticons["get_meaning"] = {}
+  emoticons["get_meaning"] = {:japanese_emoticon => emoticons_file}
   return emoticons
 end
 

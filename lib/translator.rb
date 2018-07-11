@@ -2,6 +2,7 @@ require 'yaml'
 
 def load_library(file)
   emoticons_file = YAML.load_file(file)
+  puts emoticons_file
   emoticons = {}
   emoticons["get_emoticon"] = {}
   emoticons["get_meaning"] = {:japanese_emoticon => emoticons_file}

@@ -6,6 +6,11 @@ def load_library(file)
   emoticons_file.each do |meaning, emot_array|
     japanese_emoticons.push(emot_array[1])
   end
+  
+  english_emoticons = []
+  emoticons_file.each do |meaning, emot_array|
+    english_emoticons.push(emot_array[0])
+    
   meanings = []
   emoticons_file.each do |meaning, emot_array|
     meanings.push(meaning)
@@ -19,6 +24,7 @@ def load_library(file)
 
   index.each do |i|
     emoticons["get_meaning"][japanese_emoticons[i]] = meanings[i]
+    emoticons["get_emoticon"][english_emoticons[i]] = meanings[i]
   end
 
   return emoticons

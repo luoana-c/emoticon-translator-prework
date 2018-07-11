@@ -6,10 +6,23 @@ def load_library(file)
   emoticons_file.each do |meaning, emot_array|
     japanese_emoticons.push(emot_array[1])
   end
+  meanings = []
+  emoticons_file.each do |meaning, emot_array|
+    meanings.push(meaning)
+  end
+  puts japanese_emoticons
   emoticons = {}
   emoticons["get_emoticon"] = {}
   emoticons["get_meaning"] = {}
+  max_index = meanings.length - 1
+  index = (0..max_index).to_a
+
+  index.each do |i|
+    emoticons["get_meaning"][japanese_emoticons[i]] = meanings[i]
+  end
+
   return emoticons
+end
 end
 
 def get_japanese_emoticon

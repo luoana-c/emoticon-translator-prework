@@ -2,7 +2,10 @@ require 'yaml'
 
 def load_library(file)
   emoticons_file = YAML.load_file(file)
-  
+  japanese_emoticons = []
+  emoticons_file.each do |meaning, emot_array|
+    
+  end
   emoticons = {}
   emoticons["get_emoticon"] = {}
   emoticons["get_meaning"] = {}

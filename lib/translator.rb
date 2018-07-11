@@ -16,7 +16,7 @@ def load_library(file)
   emoticons_file.each do |meaning, emot_array|
     meanings.push(meaning)
   end
-  puts japanese_emoticons
+  
   emoticons = {}
   emoticons["get_emoticon"] = {}
   emoticons["get_meaning"] = {}

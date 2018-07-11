@@ -34,11 +34,12 @@ end
 
 def get_japanese_emoticon(file, emoticon)
   emoticons = load_library(file)
-  if emoticons["get_emoticon"][emoticon] == nil 
-    "Sorry, that emoticon was not found"
+  if emoticons["get_emoticon"].has_key? emoticon
+    jap_emoticon = emoticons["get_emoticon"][emoticon]
+    
+  else 
+  puts "Sorry, that emoticon was not found"
   end
-  jap_emoticon = emoticons["get_emoticon"][emoticon]
-  jap_emoticon
 end
 
 def get_english_meaning

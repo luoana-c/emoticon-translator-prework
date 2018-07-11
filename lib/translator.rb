@@ -11,6 +11,7 @@ def load_library(file)
   emoticons_file.each do |meaning, emot_array|
     english_emoticons.push(emot_array[0])
   end
+  
   meanings = []
   emoticons_file.each do |meaning, emot_array|
     meanings.push(meaning)

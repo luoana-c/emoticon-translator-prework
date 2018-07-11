@@ -23,7 +23,7 @@ def load_library(file)
 
   return emoticons
 end
-end
+
 
 def get_japanese_emoticon
   # code goes here
